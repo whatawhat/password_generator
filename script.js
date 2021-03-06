@@ -18,31 +18,24 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //My work sofar
-
-
-//What I added
-function critSelect() {
-  var generateBtn = prompt("Please select the criteria you need for your password.");
-  alert (generateBtn);
+function generatePassword() {
+  var length = prompt("Enter how many characters your password needs to be");
+  while (length < 8 || length > 128) {
+    alert("Number has to be between 8 and 128 characters");
+    length = prompt("Enter how many characters your password needs to be");
+  }
 }
 
-generateBtn.addEventListener("click", critSelect);
+
+// //What I added
+// function critSelect() {
+//   var generateBtn = prompt("Please select the criteria you need for your password.");
+//   alert (generateBtn);
+// }
+
+// generateBtn.addEventListener("click", critSelect);
 
 
 
-//created an array
-let critOptions = ["lowercase", "uppercase", "numeric", "special symbol"];
-
-
-//create a function - what I did
-var length = "";
-function passLength() {
-var length = prompt("Enter how many characters yourpassword needs to be");
-if (length < 8) {
-  "Number has to be at least 8";
-}
-else if (length > 128)
-  "Number has to be less than 129";
-} else {
-  "Thank you!";
-}
+// //created an array
+// let critOptions = ["lowercase", "uppercase", "numeric", "special symbol"];
