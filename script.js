@@ -44,22 +44,22 @@ console.log(uppercase);
   if (uppercase) {
     var uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     password += uppercaseString[Math.floor(Math.random()*uppercaseString.length)]
-    allChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    allChar += uppercaseString;
   }
   if (lowercase) {
     var lowercaseString = "abcdefghijklmnopqrstuvwxyz"
     password += lowercaseString[Math.floor(Math.random()*lowercaseString.length)]
-    allChar += "abcdefghijklmnopqrstuvwxyz";
+    allChar += lowercaseString;
   }
   if (digits) {
     var digitsString = "1234567890"
     password += digitsString[Math.floor(Math.random()*digitsString.length)]
-    allChar += "1234567890";
+    allChar += digitsString;
   }
   if (special) {
     var specialString = "!@#$%^&*()\"\'+=,-./;:<>?[]_\\`~{}|"
     password += specialString[Math.floor(Math.random()*specialString.length)]
-    allChar += "!@#$%^&*()\"\'+=,-./;:<>?[]_\\`~{}|";
+    allChar += specialString;
   }
 
   console.log("This is my message before the for loop " + password);
